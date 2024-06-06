@@ -1,0 +1,100 @@
+body {
+  display: block;
+}
+
+.pos-layout-container {
+  position: relative;
+  z-index: 10;
+  align-content: center;
+  height: 100vh;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.tab-item-container {
+  cursor: pointer;
+  scrollbar-width: none;
+
+  display: ruby;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 20px;
+
+  border-left: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+
+  transition: background-color 0.3s ease;
+
+  -ms-overflow-style: none;
+}
+
+.tab-item-container::-webkit-scrollbar {
+  display: none;
+}
+
+.bg-blue {
+  background-color: #e4f2f5 !important;
+}
+
+.tab-item-container:hover {
+  box-shadow: inset 0 0 4px #0381ff;
+}
+
+.tab-item-container.active {
+  z-index: 0;
+  opacity: 0.3;
+  background-color: #b2cce3 !important;
+}
+
+.tab-item-title {
+  display: flex;
+  padding-left: 5px;
+}
+
+.tab-bar {
+  position: relative;
+  z-index: 10;
+  padding: 0;
+}
+
+.tab-bar-scroll {
+  overflow-x: auto;
+  display: grid;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.desc-content-container {
+  width: 80%;
+}
+
+@media (width <= 575.98px) {
+  .pos-layout-container {
+    position: relative;
+    z-index: 10;
+    align-content: normal;
+    height: 100vh;
+  }
+
+  .desc-content-container {
+    width: 100%;
+  }
+
+  .tab-item-container {
+    border-bottom: var(--bs-border-width) var(--bs-border-style)
+      var(--bs-border-color) !important;
+    border-left: 0 !important;
+  }
+}
